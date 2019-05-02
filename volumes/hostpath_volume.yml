@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hostpath-web
+spec:
+containers:
+    - name: web
+      image: nginx
+      ports:
+        - name: web
+          containerPort: 80
+          protocol: tcp
+      volumeMounts:
+          - name: www
+            mountPath: "/usr/share/nginx/html/“
+ volumes:
+    - name: www
+      hostPath:
+        path: "/www"
+        readOnly: true
