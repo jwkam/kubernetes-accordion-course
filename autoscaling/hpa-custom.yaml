@@ -33,7 +33,7 @@ spec:
     app: hpa-example
   type: NodePort
 ---
-apiVersion: autoscaling/v1
+apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
   name: hpa-example-autoscaler
@@ -48,4 +48,4 @@ spec:
   - type: Pods
     pods:
       metricName: memory_usage_bytes
-      targetAverageValue: 10485760
+      targetAverageValue: 314572800
