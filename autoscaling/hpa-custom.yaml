@@ -44,6 +44,7 @@ spec:
     name: hpa-example
   minReplicas: 2
   maxReplicas: 10
+  metrics:
   - type: Pods
     pods:
       metricName: memory_usage_bytes
