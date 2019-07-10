@@ -1,0 +1,1 @@
+helm install stable/prometheus --name prometheus --namespace monitoring --set server.persistentVolume.enabled=false --set alertmanager.persistentVolume.enabled=false --set alertmanager.service.type=NodePort --set server.service.type=NodePort
