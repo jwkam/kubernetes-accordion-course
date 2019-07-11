@@ -1,3 +1,11 @@
+# datasource HTTP URL
+http://prometheus-server.monitoring.svc.cluster.local
+
+# CPU query
+100- (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[2m])) * 100)
+
+# Memory query
+Query: (node_memory_MemTotal_bytes - node_memory_MemFree_bytes - node_memory_Buffers_bytes - node_memory_Cached_bytes) / node_memory_MemTotal_bytes * 100
  
- # prometheus demo site
- http://demo.robustperception.io
+# prometheus demo site
+http://demo.robustperception.io
