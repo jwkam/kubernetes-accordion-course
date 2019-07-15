@@ -6,6 +6,10 @@ http://prometheus-server.monitoring.svc.cluster.local
 
 # Memory query
 (node_memory_MemTotal_bytes - node_memory_MemFree_bytes - node_memory_Buffers_bytes - node_memory_Cached_bytes) / node_memory_MemTotal_bytes * 100
+
+# http request counter sample 
+http_server_requests_seconds_count
+
  
 # prometheus demo site
 http://play.grafana.org/
