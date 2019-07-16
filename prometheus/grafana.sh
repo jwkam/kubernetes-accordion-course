@@ -2,4 +2,4 @@ helm install stable/grafana --name grafana --namespace monitoring --set service.
 
 export GRAFANA_PORT=$(kubectl get --namespace monitoring -o jsonpath="{.spec.ports[0].nodePort}" services grafana)
 
-echo Grafana_NodePort=$SERVER_PORT
+echo Grafana_NodePort=$GRAFANA_PORT
