@@ -1,1 +1,2 @@
-helm install stable/prometheus-operator --namespace monitoring --name prometheus-operator --set prometheus.prometheusSpec.serviceMonitorSelectorNilUsesHelmValues=false
+#helm install stable/prometheus-operator --namespace monitoring --name prometheus-operator --set prometheus.prometheusSpec.serviceMonitorSelectorNilUsesHelmValues=false --set prometheusOperator.service.type=NodePort --set alertmanager.service.type=NodePort --set prometheus.service.type=NodePort --set grafana.service.type=NodePort
+helm install stable/prometheus-operator --namespace monitoring --name prometheus-operator --set prometheusOperator.service.type=NodePort --set alertmanager.service.type=NodePort --set prometheus.service.type=NodePort --set grafana.service.type=NodePort
