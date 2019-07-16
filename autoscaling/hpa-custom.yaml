@@ -49,4 +49,4 @@ spec:
   - type: Pods
     pods:
       metricName: memory_usage_bytes
-      targetAverageValue: 314572800
+      targetAverageValue: 209715200
